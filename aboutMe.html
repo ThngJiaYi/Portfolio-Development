@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Ensuring the outline effect works if not in external css */
+        .hero-text-outline {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="flex h-screen bg-black overflow-hidden">
+
+     <!-- SIDEBAR (standard from index.html) -->
+<aside class="sidebar">
+  <div class="sidebar-top">
+    <div class="brand">
+      <i data-lucide="orbit" class="brand-icon"></i>
+      <h1 class="brand-text">
+        JIA<span class="brand-accent">YI</span>
+      </h1>
+    </div>
+
+    <nav class="nav">
+      <a href="/" class="sidebar-link">
+        <span>HOME PAGE</span>
+        <i data-lucide="chevron-right" class="chev"></i>
+      </a>
+
+      <a href="/aboutMe" class="sidebar-link">
+        <span>ABOUT ME</span>
+        <i data-lucide="chevron-right" class="chev"></i>
+      </a>
+
+      <div class="sidebar-item">
+        <button id="projectsToggle" class="sidebar-link sidebar-btn" aria-expanded="false" aria-controls="projectsMenu">
+          <span>PROJECTS</span>
+          <i id="projectsChevron" data-lucide="chevron-right" class="chev transition-transform"></i>
+        </button>
+
+        <div id="projectsMenu" class="projects-dropdown" hidden>
+          <a href="/technology" class="dropdown-link">Technology</a>
+          <a href="/design" class="dropdown-link">Design</a>
+          <a href="/ai" class="dropdown-link">AI</a>
+        </div>
+      </div>
+
+      <a href="/contact" class="sidebar-link">
+        <span>CONTACT</span>
+        <i data-lucide="chevron-right" class="chev"></i>
+      </a>
+    </nav>
+  </div>
+
+  <div class="sidebar-bottom">
+    <div class="socials">
+      <a href="https://www.instagram.com/plusone2peaceful/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener">
+        <i data-lucide="instagram" class="social-icon"></i>
+      </a>
+
+      <a href="https://github.com/ThngJiaYi" target="_blank" rel="noopener">
+        <i data-lucide="github" class="social-icon"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/thng-jia-yi-88b1ba305/" target="_blank" rel="noopener">
+        <i data-lucide="linkedin" class="social-icon"></i>
+      </a>
+    </div>
+
+    <div class="system">
+      <span class="system-dot"></span>
+      <p class="system-text">System Online</p>
+    </div>
+  </div>
+</aside>
+
+
+    <main class="ml-64 flex-1 h-full p-12 overflow-y-auto bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-slate-900 via-black to-black">
+        
+        <h2 class="text-6xl font-['Orbitron'] font-black text-white mb-12">
+            <span class="hero-text-outline">PILOT</span> <span class="text-cyan-400">PROFILE</span>
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <div class="lg:col-span-1 space-y-8">
+                <div class="bg-cyan-900/10 border border-cyan-800/30 p-2 rounded-xl">
+                    <div class="aspect-square w-full bg-slate-900 rounded-lg overflow-hidden relative group">
+                        <img
+                            src="/image/whatsapp-profile.jpeg"
+                            alt="Profile"
+                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                            />
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h3 class="text-xl font-bold text-white font-['Orbitron']">YOUR NAME</h3>
+                            <p class="text-cyan-400 text-sm font-mono tracking-widest">LEAD DEVELOPER</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-cyan-900/10 border border-cyan-800/30 p-6 rounded-xl">
+                    <h4 class="text-cyan-500 font-bold mb-4 tracking-widest uppercase text-sm">Communication Channels</h4>
+                    <div class="space-y-3">
+                        <a href="https://github.com/ThngJiaYi" class="flex items-center gap-3 text-slate-400 hover:text-cyan-400 transition-colors">
+                            <i data-lucide="github" class="w-5 h-5"></i> <span class="text-sm">github.com/ThngJiaYi</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/thng-jia-yi-88b1ba305/" class="flex items-center gap-3 text-slate-400 hover:text-cyan-400 transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i> <span class="text-sm">/in/thng-jia-yi</span>
+                        </a>
+                        <a href="#" class="flex items-center gap-3 text-slate-400 hover:text-cyan-400 transition-colors">
+                            <i data-lucide="mail" class="w-5 h-5"></i> <span class="text-sm">thngjiayi@email.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 space-y-6">
+                
+                <div class="bg-cyan-900/10 border border-cyan-800/30 p-8 rounded-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-20">
+                        <i data-lucide="cpu" class="w-24 h-24 text-cyan-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 font-['Orbitron']">WHO AM I ?</h3>
+                    <p class="text-slate-300 leading-relaxed mb-4">
+                        I am a Diploma in Digital Design and Development student at Republic Polytechnic (2024–2027) with a strong interest in building user-focused digital solutions. I have hands-on experience in web technologies such as JavaScript, React, CSS, Python, and SQL, and enjoy applying problem-solving and design thinking to real-world challenges. Through projects like the OCBC Ignite Innovation Challenge and Polyos, I have worked collaboratively to develop functional prototypes and AI-powered applications that enhance productivity and digital experiences. I also bring practical workplace experience from customer service and caregiving roles, which have strengthened my communication skills, adaptability, and attention to detail.
+                    </p>
+                    <p class="text-slate-300 leading-relaxed">
+                       
+                    </p>
+                </div>
+
+                <div class="bg-cyan-900/10 border border-cyan-800/30 p-8 rounded-xl">
+                    <h3 class="text-xl font-bold text-white mb-6 font-['Orbitron']">PROFICIENCIES</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-cyan-400 font-mono text-sm">SOFT SKILLS</span>
+                                <span class="text-white font-mono text-sm">95%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-cyan-500 w-[95%] shadow-[0_0_10px_cyan]"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-cyan-400 font-mono text-sm">CODING</span>
+                                <span class="text-white font-mono text-sm">70%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-cyan-500 w-[80%] shadow-[0_0_10px_cyan]"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-cyan-400 font-mono text-sm">BUSINESS INTELLIGENCE</span>
+                                <span class="text-white font-mono text-sm">88%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-cyan-500 w-[88%] shadow-[0_0_10px_cyan]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script>lucide.createIcons();</script>
+    <script src="animations.js"></script>
+</body>
+</html>

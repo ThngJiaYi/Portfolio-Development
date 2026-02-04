@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THNG JIA YI Portfolio</title>
+
+  <!-- Tailwind + Lucide -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="app">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <div class="brand">
+        <i data-lucide="orbit" class="brand-icon"></i>
+        <h1 class="brand-text">
+          JIA<span class="brand-accent">YI</span>
+        </h1>
+      </div>
+
+      <nav class="nav">
+        <a href="/" class="sidebar-link active">
+          <span>HOME PAGE</span>
+          <i data-lucide="chevron-right" class="chev"></i>
+        </a>
+
+        <a href="/aboutMe" class="sidebar-link">
+          <span>ABOUT ME</span>
+          <i data-lucide="chevron-right" class="chev"></i>
+        </a>
+
+        <!-- Projects dropdown -->
+        <div class="sidebar-item">
+          <button id="projectsToggle" class="sidebar-link sidebar-btn" aria-expanded="false" aria-controls="projectsMenu">
+            <span>PROJECTS</span>
+            <i id="projectsChevron" data-lucide="chevron-right" class="chev transition-transform"></i>
+          </button>
+
+          <div id="projectsMenu" class="projects-dropdown" hidden>
+            <a href="/technology" class="dropdown-link">Technology</a>
+            <a href="/design" class="dropdown-link">Design</a>
+            <a href="/ai" class="dropdown-link">AI</a>
+          </div>
+        </div>
+
+        <a href="/contact" class="sidebar-link">
+          <span>CONTACT</span>
+          <i data-lucide="chevron-right" class="chev"></i>
+        </a>
+
+      </nav>
+    </div>
+
+    <div class="sidebar-bottom">
+      <div class="socials">
+        <a href="https://www.instagram.com/plusone2peaceful/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener">
+        <i data-lucide="instagram" class="social-icon"></i>
+        </a>
+
+        <a href="https://github.com/ThngJiaYi" target="_blank" rel="noopener">
+        <i data-lucide="github" class="social-icon"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/thng-jia-yi-88b1ba305/" target="_blank" rel="noopener">
+        <i data-lucide="linkedin" class="social-icon"></i>
+        </a>
+      </div>
+
+      <div class="system">
+        <span class="system-dot"></span>
+        <p class="system-text">System Online</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <!-- HERO -->
+    <section class="hero">
+      <!-- Left content -->
+      <div class="hero-left">
+
+
+        <h1 class="hero-title">
+          <span class="hero-text-outline">TECHNOLOGY</span>
+          <span class="hero-text-outline">DESIGN</span>
+          <span class="hero-text-filled">AI.</span>
+        </h1>
+
+        <p class="hero-sub">
+          TECHNOLOGY IS A USEFUL SERVANT BUT A DANGEROUS MASTER.
+        </p>
+        <p class="hero-by">BY CHRISTIAN LOUS LANGE</p>
+
+        </div>
+      </div>
+
+      <!-- Right profile -->
+      <div class="profile-container">
+        <div class="profile-circle">
+          <img src="/image/me.jpeg" alt="Profile" />
+          <div class="profile-overlay"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Lucide icons
+    lucide.createIcons();
+
+    // Mouse spotlight (so you don't depend on animations.js)
+    document.addEventListener("mousemove", (e) => {
+      document.body.style.setProperty("--x", e.clientX + "px");
+      document.body.style.setProperty("--y", e.clientY + "px");
+    });
+
+    // Projects dropdown toggle
+    const btn = document.getElementById("projectsToggle");
+    const menu = document.getElementById("projectsMenu");
+    const chev = document.getElementById("projectsChevron");
+
+    btn?.addEventListener("click", () => {
+      const isOpen = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!isOpen));
+
+      if (isOpen) {
+        menu.hidden = true;
+        menu.classList.remove("open");
+        chev.style.transform = "rotate(0deg)";
+      } else {
+        menu.hidden = false;
+        menu.classList.add("open");
+        chev.style.transform = "rotate(90deg)";
+      }
+    });
+  </script>
+
+  <!-- optional: keep if you still want it -->
+  <script src="animations.js"></script>
+</body>
+</html>

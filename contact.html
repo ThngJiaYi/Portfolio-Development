@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex h-screen bg-black overflow-hidden">
+
+    <!-- SIDEBAR (standard from index.html) -->
+<aside class="sidebar">
+  <div class="sidebar-top">
+    <div class="brand">
+      <i data-lucide="orbit" class="brand-icon"></i>
+      <h1 class="brand-text">
+        JIA<span class="brand-accent">YI</span>
+      </h1>
+    </div>
+
+    <nav class="nav">
+      <a href="/" class="sidebar-link">
+        <span>HOME PAGE</span>
+        <i data-lucide="chevron-right" class="chev"></i>
+      </a>
+
+      <a href="/aboutMe" class="sidebar-link">
+        <span>ABOUT ME</span>
+        <i data-lucide="chevron-right" class="chev"></i>
+      </a>
+
+      <div class="sidebar-item">
+        <button id="projectsToggle" class="sidebar-link sidebar-btn" aria-expanded="false" aria-controls="projectsMenu">
+          <span>PROJECTS</span>
+          <i id="projectsChevron" data-lucide="chevron-right" class="chev transition-transform"></i>
+        </button>
+
+        <div id="projectsMenu" class="projects-dropdown" hidden>
+          <a href="/technology" class="dropdown-link">Technology</a>
+          <a href="/design" class="dropdown-link">Design</a>
+          <a href="/ai" class="dropdown-link">AI</a>
+        </div>
+      </div>
+
+      <a href="/contact" class="sidebar-link">
+        <span>CONTACT</span>
+        <i data-lucide="chevron-right" class="chev"></i>
+      </a>
+    </nav>
+  </div>
+
+  <div class="sidebar-bottom">
+    <div class="socials">
+      <a href="https://www.instagram.com/plusone2peaceful/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener">
+        <i data-lucide="instagram" class="social-icon"></i>
+      </a>
+
+      <a href="https://github.com/ThngJiaYi" target="_blank" rel="noopener">
+        <i data-lucide="github" class="social-icon"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/thng-jia-yi-88b1ba305/" target="_blank" rel="noopener">
+        <i data-lucide="linkedin" class="social-icon"></i>
+      </a>
+    </div>
+
+    <div class="system">
+      <span class="system-dot"></span>
+      <p class="system-text">System Online</p>
+    </div>
+  </div>
+</aside>
+
+    <main class="ml-64 flex-1 h-full p-12 overflow-y-auto bg-black">
+        <h2 class="text-6xl font-['Orbitron'] font-black text-white mb-12">
+            <span class="hero-text-outline">GET IN</span> <span class="text-cyan-400">TOUCH</span>
+        </h2>
+
+        <div class="max-w-2xl">
+            <form class="space-y-6" method="POST" action="/contact">
+
+
+                <div>
+                    <label class="block text-cyan-400 text-sm font-bold mb-2 uppercase tracking-widest">Name</label>
+                    <input type="text"  name="name" class="w-full bg-cyan-900/10 border border-cyan-800/50 rounded p-3 text-white focus:outline-none focus:border-cyan-400 focus:shadow-[0_0_10px_cyan] transition-all">
+                </div>
+                <div>
+                    <label class="block text-cyan-400 text-sm font-bold mb-2 uppercase tracking-widest">Email</label>
+                    <input type="email" name="email" class="w-full bg-cyan-900/10 border border-cyan-800/50 rounded p-3 text-white focus:outline-none focus:border-cyan-400 focus:shadow-[0_0_10px_cyan] transition-all">
+                </div>
+                <div>
+                    <label class="block text-cyan-400 text-sm font-bold mb-2 uppercase tracking-widest">Message</label>
+                    <textarea name="message" rows="4" class="w-full bg-cyan-900/10 border border-cyan-800/50 rounded p-3 text-white focus:outline-none focus:border-cyan-400 focus:shadow-[0_0_10px_cyan] transition-all"></textarea>
+                </div>
+                <button class="bg-cyan-500 text-black font-bold uppercase tracking-widest px-8 py-3 rounded hover:bg-white hover:shadow-[0_0_20px_cyan] transition-all">
+                    Send Transmission
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script>lucide.createIcons();</script>
+    <script src="animations.js"></script>
+</body>
+</html>

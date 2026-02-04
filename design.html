@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects (Design)</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide (icons) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Orbitron font (you used it in classes) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body class="flex h-screen bg-black overflow-hidden">
+  <!-- SIDEBAR (standard from index.html) -->
+<aside class="sidebar">
+  <div class="sidebar-top">
+    <div class="brand">
+      <i data-lucide="orbit" class="brand-icon"></i>
+      <h1 class="brand-text">
+        JIA<span class="brand-accent">YI</span>
+      </h1>
+    </div>
+
+    <nav class="nav">
+      <a href="/" class="sidebar-link">
+        <span>HOME PAGE</span>
+        <i data-lucide="chevron-right" class="chev"></i>
+      </a>
+
+      <a href="/aboutMe" class="sidebar-link">
+        <span>ABOUT ME</span>
+        <i data-lucide="chevron-right" class="chev"></i>
+      </a>
+
+      <div class="sidebar-item">
+        <button id="projectsToggle" class="sidebar-link sidebar-btn" aria-expanded="false" aria-controls="projectsMenu">
+          <span>PROJECTS</span>
+          <i id="projectsChevron" data-lucide="chevron-right" class="chev transition-transform"></i>
+        </button>
+
+        <div id="projectsMenu" class="projects-dropdown" hidden>
+          <a href="/technology" class="dropdown-link">Technology</a>
+          <a href="/design" class="dropdown-link">Design</a>
+          <a href="/ai" class="dropdown-link">AI</a>
+        </div>
+      </div>
+
+      <a href="/contact" class="sidebar-link">
+        <span>CONTACT</span>
+        <i data-lucide="chevron-right" class="chev"></i>
+      </a>
+    </nav>
+  </div>
+
+  <div class="sidebar-bottom">
+    <div class="socials">
+      <a href="https://www.instagram.com/plusone2peaceful/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener">
+        <i data-lucide="instagram" class="social-icon"></i>
+      </a>
+
+      <a href="https://github.com/ThngJiaYi" target="_blank" rel="noopener">
+        <i data-lucide="github" class="social-icon"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/thng-jia-yi-88b1ba305/" target="_blank" rel="noopener">
+        <i data-lucide="linkedin" class="social-icon"></i>
+      </a>
+    </div>
+
+    <div class="system">
+      <span class="system-dot"></span>
+      <p class="system-text">System Online</p>
+    </div>
+  </div>
+</aside>
+
+  <main class="ml-64 flex-1 h-full p-12 overflow-y-auto bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-slate-900 via-black to-black">
+    <div class="mb-10">
+      <h2 class="text-6xl font-['Orbitron'] font-black text-white">
+        <span class="hero-text-outline">DESIGN</span> <span class="text-cyan-400">WORK</span>
+      </h2>
+      <p class="text-slate-400 mt-4 max-w-2xl">
+        UI systems, brand explorations, and product design artifacts (Figma, Illustrator, motion studies).
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <article class="p-6 bg-black/40 border border-cyan-500/20 rounded-xl hover:bg-cyan-900/10 transition-all">
+        <img
+          src="/image/1.png"
+          alt="Card Design 1 - Screen 1"
+          class="w-full h-40 object-cover rounded-lg mb-4 border border-cyan-500/20"
+        />
+        <img
+          src="/image/2.png"
+          alt="Card Design 1 - Screen 2"
+          class="w-full h-40 object-cover rounded-lg mb-4 border border-cyan-500/20"
+        />
+
+        <div class="flex items-center gap-3 mb-4">
+          <i data-lucide="pen-tool" class="w-6 h-6 text-cyan-400"></i>
+          <h3 class="text-xl font-bold text-white">Card Design 1</h3>
+        </div>
+
+        <p class="text-slate-400 text-sm mb-5">
+          Components, spacing scale, typography, and interaction rules for consistent UI delivery.
+        </p>
+
+      </article>
+
+      <article class="p-6 bg-black/40 border border-cyan-500/20 rounded-xl hover:bg-cyan-900/10 transition-all">
+        <img
+          src="/image/3.png"
+          alt="Portfolio UI Concept - Screen 1"
+          class="w-full h-40 object-cover rounded-lg mb-4 border border-cyan-500/20"
+        />
+        <img
+          src="/image/4.png"
+          alt="Portfolio UI Concept - Screen 2"
+          class="w-full h-40 object-cover rounded-lg mb-4 border border-cyan-500/20"
+        />
+
+        <div class="flex items-center gap-3 mb-4">
+          <i data-lucide="layout" class="w-6 h-6 text-cyan-400"></i>
+          <h3 class="text-xl font-bold text-white">Card Design 2</h3>
+        </div>
+
+        <p class="text-slate-400 text-sm mb-5">
+          Components, spacing scale, typography, and interaction rules for consistent UI delivery.
+        </p>
+
+      </article>
+
+      <article class="p-6 bg-black/40 border border-cyan-500/20 rounded-xl hover:bg-cyan-900/10 transition-all">
+        <img
+          src="/image/5.png"
+          alt="Brand Exploration - Screen 1"
+          class="w-full h-40 object-cover rounded-lg mb-4 border border-cyan-500/20"
+        />
+        <img
+          src="/image/6.png"
+          alt="Brand Exploration - Screen 2"
+          class="w-full h-40 object-cover rounded-lg mb-4 border border-cyan-500/20"
+        />
+
+        <div class="flex items-center gap-3 mb-4">
+          <i data-lucide="sparkles" class="w-6 h-6 text-cyan-400"></i>
+          <h3 class="text-xl font-bold text-white">Card Design 3</h3>
+        </div>
+
+        <p class="text-slate-400 text-sm mb-5">
+           Components, spacing scale, typography, and interaction rules for consistent UI delivery.
+        </p>
+
+
+      </article>
+            <article class="p-6 bg-black/40 border border-cyan-500/20 rounded-xl hover:bg-cyan-900/10 transition-all">
+        <img
+          src="/image/MIREU.png"
+          alt="Brand Exploration - Screen 1"
+          class="w-full h-40 object-cover rounded-lg mb-4 border border-cyan-500/20"
+        />
+        <img
+          src="/image/MIREU2.png"
+          alt="Brand Exploration - Screen 2"
+          class="w-full h-40 object-cover rounded-lg mb-4 border border-cyan-500/20"
+        />
+
+        <div class="flex items-center gap-3 mb-4">
+          <i data-lucide="sparkles" class="w-6 h-6 text-cyan-400"></i>
+          <h3 class="text-xl font-bold text-white">Brand Exploration</h3>
+        </div>
+
+        <p class="text-slate-400 text-sm mb-5">
+          Logo studies, color palette, icon set, and usage constraints for a cohesive identity.
+        </p>
+
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="tag-pill">Brand</span>
+          <span class="tag-pill">Illustrator</span>
+          <span class="tag-pill">Guidelines</span>
+        </div>
+
+        <div class="flex gap-3">
+          <a href="image/Thng Jia Yi_C218.fig " download class="btn-primary">DOWNLOAD</a>
+        </div>
+      </article>
+
+            </article>
+            <article class="p-6 bg-black/40 border border-cyan-500/20 rounded-xl hover:bg-cyan-900/10 transition-all">
+        <img
+          src="/image/Everbloom.png"
+          alt="Brand Exploration - Screen 1"
+          class="w-full h-40 object-cover rounded-lg mb-4 border border-cyan-500/20"
+        />
+        <img
+          src="/image/Everbloom2.png"
+          alt="Brand Exploration - Screen 2"
+          class="w-full h-40 object-cover rounded-lg mb-4 border border-cyan-500/20"
+        />
+
+        <div class="flex items-center gap-3 mb-4">
+          <i data-lucide="sparkles" class="w-6 h-6 text-cyan-400"></i>
+          <h3 class="text-xl font-bold text-white">Brand Exploration</h3>
+        </div>
+
+        <p class="text-slate-400 text-sm mb-5">
+          Logo studies, color palette, icon set, and usage constraints for a cohesive identity.
+        </p>
+
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="tag-pill">Brand</span>
+          <span class="tag-pill">Illustrator</span>
+          <span class="tag-pill">Guidelines</span>
+        </div>
+
+        <div class="flex gap-3">
+          <a href="image/EverLoom.fig " download class="btn-primary">DOWNLOAD</a>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <script>
+    // Render Lucide icons
+    lucide.createIcons();
+
+    // Dropdown toggle (so it works even if /animations.js doesn't include it)
+    const btn = document.getElementById("projectsToggle");
+    const menu = document.getElementById("projectsMenu");
+    const chev = document.getElementById("projectsChevron");
+
+    if (btn && menu) {
+      btn.addEventListener("click", () => {
+        const isOpen = !menu.hasAttribute("hidden");
+        if (isOpen) menu.setAttribute("hidden", "");
+        else menu.removeAttribute("hidden");
+
+        btn.setAttribute("aria-expanded", String(!isOpen));
+
+        // rotate chevron (match your CSS direction)
+        if (chev) chev.classList.toggle("rotate-90", !isOpen);
+      });
+    }
+  </script>
+
+  <script src="/animations.js"></script>
+</body>
+</html>
